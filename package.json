@@ -1,0 +1,9 @@
+{
+  "name": "climate-agency-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/climate-agency/website.git",
+  "author": "Evgenij Beloded <evgenij@climateagency.earth>",
+  "license": "MIT",
+  "dependencies": {}
+}

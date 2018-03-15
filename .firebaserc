@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "climate-agency"
+    "default": "climate-agency",
+    "develop": "climate-agency-dev"
   }
 }

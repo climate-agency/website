@@ -1,22 +1,19 @@
 import * as React from 'react';
+import * as Debug from 'debug';
 import { Switch, Route } from 'react-router';
+import { NavLink } from 'react-router-dom';
 import Home from './Home';
 import DashClimateFund from './DashClimateFund';
-import { Link } from 'react-router-dom';
 import './index.css';
+
+const debug = Debug('App:Bla');
+
+debug('Hello world');
 
 const Website = () => (
   <div>
     <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-
-        <li>
-          <Link to="/dash-climate-fund">Dash Climate Fund</Link>
-        </li>
-      </ul>
+      <NavLink to="/dash-climate-fund">Dash Climate Fund</NavLink>
     </nav>
     <main>
       <Switch>

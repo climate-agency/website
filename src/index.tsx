@@ -7,9 +7,11 @@ import * as Debug from 'debug';
 
 const debug = Debug('App:index');
 
-if (process.env.NODE_ENV === 'production') {
+if (true || process.env.NODE_ENV === 'production') {
   debug('Initializing GA');
-  ReactGA.initialize('UA-108008469-1');
+  ReactGA.initialize('UA-108008469-1', {
+    debug: false
+  });
 }
 
 const rootElement = document.getElementById('root') as HTMLElement;

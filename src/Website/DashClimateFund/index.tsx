@@ -1,11 +1,14 @@
 import * as React from 'react';
-import withPageView from '../withPageView';
+import gaPageView from '../gaPageView';
 
 const debug = require('debug')('App:DCF');
 
-const DashClimateFund = () => {
-  debug('Dash Climate Fund Render');
-  return <div>Dash Climate Fund</div>;
-};
+@gaPageView('/dash-climate-fund')
+class DashClimateFund extends React.Component {
+  render() {
+    debug('render dcf');
+    return <div>Dash Climate Fund</div>;
+  }
+}
 
-export default withPageView(DashClimateFund, '/dash-climate-fund');
+export default DashClimateFund;

@@ -1,9 +1,10 @@
 language: node_js
 node_js: lts/*
-install: true
+install: yarn install
 cache:
   yarn: true
-before_deploy: "echo 'ready?'"
+script: echo "script"
+before_deploy: yarn build
 deploy:
   - provider: firebase
     project: "climate-agency"
@@ -19,4 +20,4 @@ deploy:
       secure: UtR65dQJnf2ud3A+uev5oUVHTZFoFnrcgbYOsdn7H7kBf3PH7ABKrxWrmNa++jMo1Sf23M9jwjhdV1RypKOmM05ixV872GS06ySdrJqNjYCsctaanvBkrt4tjoQkTFmXRnlMsPb/4s6hNOdGmFlFkP3ADCD8/X/kh5Wgux01vzAEkCqZDbXpL3QHIJEaPYE6+Xa+DB93w2ga5LOKo/B9rSkuV4IC1oYLEqVBKt7WxJpvnxufT9+h8Dd/z5nI4bpneJVvuLlW1s507vjSigIMaLyDMCwd6m2fC4rmsTVFvUF+EP+28dPG3c5szaYC6Ssc4Na+ZtWHdB7rjPh38Sv5kbhBfqhmi3wW751lA5zmj/T2lVn+Y0V4TCMd9TxT4s3RaZWmrg/rhMT5D5bAobJKUEaDxp/uBX7ueXxj/WbF7scxMXHAinUViQE8nMlD09BjV2XHilkurixSp8upJIE4j25TvduPNeM/3EIUJAahS6c0QLZVZ2t3KNEAwxRCEY8Us04S7aNuQYFW/l2bqPzypgb4ox6LYwwyhbFDjQvjlaaIRjeQgiHZfZFM7FqHAfx//DaMrrXjz0gDBqwIrm/rIKFIot2fHEUDgzB9zKZY7lVJQmhbf68Ht74tmanJQxEx6rgGtduyNUJUDx7EF8A0TX0V4Sex5nptBYoj2REGUEk=
     on:
       branch: develop
-script: yarn build
+

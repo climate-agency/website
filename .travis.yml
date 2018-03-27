@@ -1,13 +1,13 @@
+sudo: required
 language: node_js
+addons:
+  chrome: stable
 node_js: lts/*
 cache:
   yarn: true
   directories:
     - node_modules
-before_install: "rm -rf node_modules"
-before_script: ls
-script: echo "script"
-before_deploy: yarn build
+script: yarn build
 deploy:
   - provider: firebase
     project: "climate-agency"

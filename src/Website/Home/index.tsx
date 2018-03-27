@@ -9,7 +9,7 @@ const Home = () => (
     <h1>
       Decentralized<br />Climate Agency
     </h1>
-    <div className="earth-video-wrap">
+    <div className="earth-video-wrap" style={{ display: 'none' }}>
       <video
         src={video}
         poster={poster}

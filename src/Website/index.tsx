@@ -12,9 +12,6 @@ debug('Hello world');
 
 const Website = () => (
   <div>
-    <nav>
-      <NavLink to="/dash-climate-fund">Dash Climate Fund</NavLink>
-    </nav>
     <main>
       <Switch>
         <Route exact={true} path="/" component={Home} />
@@ -22,6 +19,9 @@ const Website = () => (
         <Route component={Home} />
       </Switch>
     </main>
+    <nav>
+      <NavLink to="/dash-climate-fund">Dash Climate Fund</NavLink>
+    </nav>
   </div>
 );
 

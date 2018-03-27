@@ -1,7 +1,11 @@
 language: node_js
 node_js: lts/*
+cache:
+  yarn: true
+  directories:
+    - node_modules
 before_script: ls
-script: yarn build
+before_deploy: yarn build
 deploy:
   - provider: firebase
     project: "climate-agency"
